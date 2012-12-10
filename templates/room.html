@@ -1,0 +1,24 @@
+<template name="room">
+<div id="room">
+	<div id="messages">
+		{{#each messages}}
+			<div>
+				<div>
+					{{character characterId}} : {{formatTime time}}
+				</div>
+				<div>
+					{{message}}
+				</div>
+				<div>
+					<span class="ui-icon ui-icon-closethick delete"></span>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+
+	<div id="say">
+		<input type="text" id="message" />
+		<input type="button" id="btnSay" value="Say" />
+	</div>
+</div>
+</template>

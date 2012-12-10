@@ -1,0 +1,25 @@
+<template name="roomlist">
+	<div id="roomlist">
+		<div id="rooms">
+			{{#each rooms}}
+				<div>
+					<div>
+						{{name}}
+					</div>
+					<div>
+						<input type="button" value="Select" class="selectRoom"/>
+					</div>
+
+				</div>
+			{{/each}}
+		</div>
+	
+		<a href='#' id="lnkCreateRoom">Create New Room</a>	
+
+		<div id="divCreateRoom" style="display: none;">
+			<input type="text" class="name"/>
+			<input type="button" class="create" value="Create"/>
+			<input type="button" class="cancel" value="Cancel"/>
+		</div>
+	</div>
+</template>

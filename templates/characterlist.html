@@ -1,0 +1,25 @@
+<template name="characterlist">
+	<div id="characterlist">
+		<div id="characters">
+			{{#each characters}}
+				<div class="character">
+					<div>
+						{{name}}
+					</div>
+					<div>
+						<input type="button" value="Select" class="selectCharacter"/>
+					</div>
+
+				</div>
+			{{/each}}
+		</div>
+	
+		<a href='#' id="lnkCreateCharacter">Create New Character</a>	
+
+		<div id="divCreateCharacter" style="display: none;">
+			<input type="text" id="name" />
+			<input type="button" id="btnCreateCharacter" value="Create"/>
+			<input type="button" id="btnCancel" value="Cancel"/>
+		</div>
+	</div>
+</template>
