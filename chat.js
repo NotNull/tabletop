@@ -121,8 +121,6 @@
 			else{
 				//message = RChat.parser(message);
 				
-				RChat.log(message);
-
 				Messages.insert({
 					roomId: roomId,
 					characterId: characterId,
@@ -194,14 +192,10 @@
 		createCharacter: function(name){
 			if(!RChat.user.characterExists(name)){
 				
-				var group = Groups.findOne({}, {sort: 'level'});
-
-				if(group){
-					Characters.insert({
-						userId: RChat.userId(),
-						name: name
-					});
-				}
+				Characters.insert({
+					userId: RChat.userId(),
+					name: name
+				});
 
 			}
 		},
